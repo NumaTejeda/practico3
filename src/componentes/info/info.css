@@ -1,0 +1,15 @@
+#info{
+    display: flex;
+    flex-direction: column;
+}
+#info button{
+    margin: 1vh 0; 
+}
+input{
+    padding: 5px 5px;
+}
+label{
+    color: white;
+    padding: 5px 5px;
+
+}

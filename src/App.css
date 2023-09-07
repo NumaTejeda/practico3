@@ -1,15 +1,26 @@
 .App {
   display: flex;
-  justify-content: center;
-  text-align: center;
+  flex-direction: column;
+  background: linear-gradient(red, blue);
   margin: 20px auto;
+  border: 2px solid red;
+  box-shadow: 2px 2px 2px black;
+  border-radius: 15px;
+  width: 60vw;
   max-width: 380px;
   min-width: 300px;
   min-height: 200px;
-  border: 1px solid red;
+  padding: 1vw;
 }
-.photo{
-  height: 150px;
-  width: 150px;
+button{
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: rgb(56, 175, 255);
+  width: 100%;
+  padding: 5px 1vw;
 }
-
+button:hover{
+  border: 2px solid black;
+  transition: all 4000ms;
+}

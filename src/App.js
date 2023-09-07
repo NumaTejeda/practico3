@@ -1,18 +1,16 @@
 import './App.css';
+import Info from './componentes/info/info';
+import Botonera from './componentes/botonera/botonera';
+import Title from './componentes/title/title';
+import PlayMode from './componentes/playMode/play_mode';
 
 function App() {
   return (
     <div className='App'>
-      <img
-        src="https://i.imgur.com/yXOvdOSs.jpg"
-        alt="Hedy Lamarr"
-        className="photo"
-      />
-      <ul>
-        <li>Inventar nuevo semáforo</li>
-        <li>Ensayar la escena de la película</li>
-        <li>Mejorar la tecnología del espectro</li>
-      </ul>
+      <Title />
+      <Info />
+      <Botonera />
+      <PlayMode />
     </div>
 
   );

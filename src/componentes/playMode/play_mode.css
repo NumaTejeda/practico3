@@ -1,0 +1,14 @@
+#pantalla{
+    display: flex;
+    background-color: #b29dff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px blue;
+    border: 1px solid green;
+    height: 20vh;
+    margin: 5px 0px;
+}
+#resultado{
+    margin: auto auto;
+    font-size: x-large;
+    text-align: center;
+}

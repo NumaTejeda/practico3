@@ -1,0 +1,14 @@
+.botones{
+    cursor: pointer;
+    height: auto;
+    min-width: 5vw;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px dashed white;
+    margin: 5px;
+}
+.botones:hover{
+    box-shadow: 2px 2px 5px red;
+    border: 2px solid black;
+    transition: all 2000ms;
+}
