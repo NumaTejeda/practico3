@@ -1,6 +1,10 @@
 import './info.css';
 
-function Info() {
+function Info({name, setName}){
+    const handleName = () => {
+        let nombre = document.getElementById("name").value;
+        setName(nombre);
+    }
     return (
         <div id="info">
             <label htmlFor="name">Nombre de usuario:</label>
@@ -15,7 +19,7 @@ function Info() {
             <p id="error" style={{ display: "none", color: "white" }}>
                 Campo obligatorio 👆
             </p>
-            <button id="continue" disabled="">
+            <button id="continue" onClick={handleName}>
                 Continue...
             </button>
         </div>

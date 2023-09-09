@@ -3,16 +3,19 @@ import Info from './componentes/info/info';
 import Botonera from './componentes/botonera/botonera';
 import Title from './componentes/title/title';
 import PlayMode from './componentes/playMode/play_mode';
+import { useState } from 'react';
 
-function App() {
+function App(){
+  const [name, setName] = useState("");
+  console.log(name);
   return (
     <div className='App'>
+      <h1>Estoy en react</h1>
       <Title />
-      <Info />
+      <Info name={name} setName={setName}/>
       <Botonera />
-      <PlayMode />
+      <PlayMode name={name}/>
     </div>
-
   );
 }
 

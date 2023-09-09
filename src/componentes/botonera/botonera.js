@@ -1,21 +1,27 @@
 import Boton from './boton/boton';
 import './boton/boton.css';
 import './botonera.css';
-function Botonera() {
+
+
+function Botonera(){
+   
     return (
         <div className='choise'>
             <Boton
                 imagen='piedra.png'
                 altImagen='boton piedra'
-            />
+                ID='piedra'
+                />
             <Boton
                 imagen='papel.png'
                 altImagen='boton papel'
-            />
+                ID='papel'
+                />
             <Boton
                 imagen='tijera.png'
                 altImagen='boton tijera'
-            />
+                ID='tijera'
+                />
         </div>
     )
 }

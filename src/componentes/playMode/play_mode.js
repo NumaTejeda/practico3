@@ -1,6 +1,7 @@
 import './play_mode.css';
 
-function PlayMode() {
+function PlayMode({name}){
+    
     return (
         <>
             <div>
@@ -9,7 +10,7 @@ function PlayMode() {
                 </button>
             </div>
             <div id="pantalla">
-                <p id="resultado" />
+                <p id="resultado">{name}</p>
             </div>
             <div className="hide">
                 <button className="reset" id="reset">
