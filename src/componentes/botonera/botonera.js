@@ -1,12 +1,15 @@
 import Boton from './boton/boton';
 import './boton/boton.css';
 import './botonera.css';
+// import styled from 'styled-components';
 
 
-function Botonera(){
-   
+function Botonera({name}){
+    if(name !== ""){
+        document.getElementsByClassName("choise")[0].style.display = "flex";
+    }
     return (
-        <div className='choise'>
+        <div className='choise' style={{display: "none"}}>
             <Boton
                 imagen='piedra.png'
                 altImagen='boton piedra'

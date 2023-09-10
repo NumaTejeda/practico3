@@ -7,13 +7,12 @@ import { useState } from 'react';
 
 function App(){
   const [name, setName] = useState("");
-  console.log(name);
   return (
     <div className='App'>
       <h1>Estoy en react</h1>
       <Title />
       <Info name={name} setName={setName}/>
-      <Botonera />
+      <Botonera name={name} />
       <PlayMode name={name}/>
     </div>
   );

@@ -1,7 +1,6 @@
 import './play_mode.css';
 
 function PlayMode({name}){
-    
     return (
         <>
             <div>
