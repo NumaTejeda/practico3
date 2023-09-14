@@ -14,7 +14,7 @@ function Info({setName}){
 
     function errorName(){
         USER_NAME = document.getElementById("name").value;
-        const BUSCAR = /[A-Za-z0-9]/;             
+        const BUSCAR = /^[A-Za-z0-9_-ñÑáéíóúÁÉÍÓÚ]{3,16}/;              
         let busqueda = BUSCAR.test(USER_NAME);
         if(busqueda === true){
             USER_NAME = USER_NAME.trim();

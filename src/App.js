@@ -7,13 +7,19 @@ import { useState } from 'react';
 
 function App(){
   const [name, setName] = useState("");
+
+  const playUser = (USER_PLAY) => {
+    console.log(USER_PLAY + " COMPONENTE ABUELO")
+  }
+  const nombreDeInfo = name;
+      
   return (
     <div className='App'>
       <h1>Estoy en react</h1>
       <Title />
-      <Info name={name} setName={setName}/>
-      <Botonera name={name} />
-      <PlayMode name={name}/>
+      <Info setName={setName}/>
+      <Botonera nombreDeInfo={nombreDeInfo} playUser={playUser}/>
+      <PlayMode name={name} />
     </div>
   );
 }
