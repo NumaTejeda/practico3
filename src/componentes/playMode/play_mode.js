@@ -1,7 +1,8 @@
 import './play_mode.css';
 
 
-function PlayMode({name}){
+function PlayMode(props){    
+
     return (
         <>
             <div>
@@ -10,10 +11,10 @@ function PlayMode({name}){
                 </button>
             </div>
             <div id="pantalla">
-                <p id="resultado">{name}</p>
+                <p id="resultado">{props.name} jugó: {props.jugadaUsuario}</p>
             </div>
             <div className="hide">
-                <button className="reset" id="reset">
+                <button className="reset" id="reset" onClick={props.reset}>
                     Reset
                 </button>
             </div>

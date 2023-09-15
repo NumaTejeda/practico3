@@ -1,15 +1,11 @@
 import './info.css';
-import { useState } from 'react';
 
 let USER_NAME;
 
-function Info({setName}){
-    const [inputState, setInputState] = useState(false);
-    const [btnActivo, setBtnActivo] = useState(false);
-    const [display, setDisplay] = useState("none");
+function Info(props){
     function handleDisplay(d){
         let modo = document.getElementById("error").style.display = d;
-        setDisplay(modo);
+        props.setDisplay(modo);
     }
 
     function errorName(){
@@ -19,19 +15,20 @@ function Info({setName}){
         if(busqueda === true){
             USER_NAME = USER_NAME.trim();
             handleDisplay("none")
-            setBtnActivo(true);
+            props.setBtnActivo(true);
             return USER_NAME;
         }
         handleDisplay("block")
-        setBtnActivo(false)        
+        props.setBtnActivo(false)        
         return;
     }
 
     const handleName = () => {
-        setInputState(true);
-        setBtnActivo(false);
+        props.setInputState(true);
+        props.setBtnActivo(false);
+        props.setMostrarBotonera(true);
         let USER_NAME = document.getElementById("name").value;
-        setName(USER_NAME);
+        props.setName(USER_NAME);
     }
     return (
         <div id="info">
@@ -44,12 +41,12 @@ function Info({setName}){
                 autoComplete="name"
                 maxLength={15}
                 onChange={errorName}
-                disabled={inputState}
+                disabled={props.inputState}
             />
             <p id="error" style={{ display:{handleDisplay}}}>
                 Campo obligatorio 👆
             </p>
-            <button id="continue" onClick={handleName} disabled={!btnActivo}>
+            <button id="continue" onClick={handleName} disabled={!props.btnActivo}>
                 Continue...
             </button>
         </div>
