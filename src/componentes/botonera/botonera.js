@@ -2,30 +2,20 @@ import Boton from './boton/boton';
 import './boton/boton.css';
 import './botonera.css';
 import styled from 'styled-components';
-// import { useRef } from 'react';
 
 
 
 // queda por hacer: que se pinten las opciones al ser selecionadas
 function Botonera(props){
-    // const elementRef = useRef(null);
-
-    // const changeDisplay = () =>{
-    //     if(props.name !== ""){
-    //         document.getElementsByClassName("choise")[0].style.display = "flex";
-    //     }
-    //     else{
-    //         changeDisplay();
-    //     }
-    // }
+    
     const handlePlayUser = (USER_PLAY) => {
-        console.log(USER_PLAY + " COMPONENTE PADRE")
         props.playUser(USER_PLAY);
+        props.setBtnDisabled(false);
     }
     
     
     return (
-        <div className='choise' /*ref={elementRef}*/>
+        <div className='choise'>
             <Boton
                 imagen='piedra.png'
                 altImagen='boton piedra'

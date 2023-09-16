@@ -13,8 +13,11 @@ function App(){
   const [display, setDisplay] = useState("none");
   const [mostrarBotonera, setMostrarBotonera] = useState(false)
   const [jugadaUsuario, setJugadaUsuario] = useState(null);
+  const [btnDisabled, setBtnDisabled] = useState(true);
+
+  
+  
   let playUser = (USER_PLAY) => {
-    console.log(USER_PLAY + " COMPONENTE ABUELO")
     setJugadaUsuario(USER_PLAY);
   }
   const reset = () => {
@@ -26,7 +29,6 @@ function App(){
      
   return (
     <div className='App'>
-      <h1>Estoy en react</h1>
       <Title />
       <Info 
         setName={setName} 
@@ -42,11 +44,15 @@ function App(){
         name={name}
         playUser={playUser} 
         reset={reset}
+        setBtnDisabled={setBtnDisabled}
         />}
       <PlayMode  
         name={name} 
         reset={reset}
         jugadaUsuario={jugadaUsuario}
+        setMostrarBotonera={setMostrarBotonera}
+        setBtnDisabled={setBtnDisabled}
+        btnDisabled={btnDisabled}
         />
     </div>
   );
