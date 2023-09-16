@@ -16,7 +16,7 @@ function App(){
   const [btnDisabled, setBtnDisabled] = useState(true);
 
   
-  
+  // Esta funcion esta trayendo la eleccion del jugador desde dos niveles mas abajo. 
   let playUser = (USER_PLAY) => {
     setJugadaUsuario(USER_PLAY);
   }
@@ -25,6 +25,7 @@ function App(){
     setInputState(false);
     playUser = "";
     setMostrarBotonera(false);
+    setBtnActivo(true);
   }
      
   return (
